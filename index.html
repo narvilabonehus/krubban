@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Närvilä – Christmas Gospel</title>
+  <meta name="description" content="Choose your language to watch the Christmas Gospel. Embedded YouTube player." />
+  <style>
+    :root {
+      --maxw: 960px;
+      --gap: 16px;
+      --radius: 14px;
+      --border: #e5e7eb;
+      --text: #111827;
+      --muted: #6b7280;
+      --link: #1d4ed8;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: #ffffff;
+      line-height: 1.5;
+    }
+
+    .container {
+      width: min(100% - 24px, var(--maxw));
+      margin-inline: auto;
+    }
+
+    header {
+      padding: 18px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    header h1 {
+      font-size: clamp(20px, 3vw, 28px);
+      margin: 0;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      text-align: center;
+    }
+
+    main {
+      padding: 18px 0 28px;
+    }
+
+    .lead {
+      font-size: clamp(16px, 2.3vw, 18px);
+      color: var(--muted);
+      margin: 4px 0 18px;
+      text-align: center;
+    }
+
+    .player-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: #f9fafb;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      margin-bottom: 20px;
+    }
+
+    .player-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .placeholder {
+      text-align: center;
+      color: var(--muted);
+      padding: 12px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: var(--gap);
+    }
+
+    .flag {
+      display: grid;
+      place-items: center;
+      gap: 6px;
+      padding: 14px 10px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: #ffffff;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+      transition: 0.12s ease;
+      user-select: none;
+    }
+
+    .flag:hover {
+      border-color: #c7d2fe;
+      box-shadow: 0 6px 14px rgba(29,78,216,0.12);
+      transform: translateY(-2px);
+    }
+
+    .emoji {
+      font-size: 40px;
+    }
+
+    .label {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .btn-link {
+      display: inline-block;
+      background: #1d4ed8;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      margin-top: 24px;
+      padding: 12px 0;
+      font-size: 12px;
+      text-align: center;
+      color: var(--muted);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body { background: #0b0c10; color: #ffffff; }
+      header, footer { border-color: #20232d; }
+      .lead { color: #c9d1d9; }
+      .player-wrap { background: #11131a; border-color: #20232d; }
+      .flag { background: #11131a; border-color: #20232d; }
+      .label { color: #c9d1d9; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1>Närvilä – Christmas Gospel</h1>
+    </div>
+  </header>
+
+  <main class="container">
+    <p class="lead">
+      Choose your language to watch the Christmas Gospel.
+      Click a flag below; the video will play here on this page.
+    </p>
+
+    <!-- Player -->
+    <section class="player-wrap" id="player-wrap">
+      <div class="placeholder" id="placeholder">
+        Select a language to load the video.
+      </div>
+    </section>
+
+    <!-- Button under video -->
+    <div style="text-align:center;">
+      <a href="https://narvila.fi" target="_blank" class="btn-link">Visit narvila.fi</a>
+    </div>
+
+    <!-- Flags in recommended order -->
+    <div class="grid" id="flag-grid" style="margin-top:25px;">
+
+      <!-- 1. English -->
+      <button class="flag" data-video="YOUTUBE_ID_ENGLISH">
+        <div class="emoji">🇺🇸</div>
+        <div class="label">English</div>
+      </button>
+
+      <!-- 2. Finnish -->
+      <button class="flag" data-video="wiJoao05PuU">
+        <div class="emoji">🇫🇮</div>
+        <div class="label">Finnish</div>
+      </button>
+
+      <!-- 3. Swedish -->
+      <button class="flag" data-video="wiJoao05PuU">
+        <div class="emoji">🇸🇪</div>
+        <div class="label">Swedish</div>
+      </button>
+
+      <!-- 4. Norwegian -->
+      <button class="flag" data-video="YOUTUBE_ID_NORWEGIAN">
+        <div class="emoji">🇳🇴</div>
+        <div class="label">Norwegian</div>
+      </button>
+
+      <!-- 5. German -->
+      <button class="flag" data-video="YOUTUBE_ID_GERMAN">
+        <div class="emoji">🇩🇪</div>
+        <div class="label">German</div>
+      </button>
+
+      <!-- 6. French -->
+      <button class="flag" data-video="YOUTUBE_ID_FRENCH">
+        <div class="emoji">🇫🇷</div>
+        <div class="label">French</div>
+      </button>
+
+      <!-- 7. Spanish -->
+      <button class="flag" data-video="YOUTUBE_ID_SPANISH">
+        <div class="emoji">🇪🇸</div>
+        <div class="label">Spanish</div>
+      </button>
+
+      <!-- 8. Ukrainian -->
+      <button class="flag" data-video="YOUTUBE_ID_UKRAINIAN">
+        <div class="emoji">🇺🇦</div>
+        <div class="label">Ukrainian</div>
+      </button>
+
+      <!-- 9. Russian -->
+      <button class="flag" data-video="YOUTUBE_ID_RUSSIAN">
+        <div class="emoji">🇷🇺</div>
+        <div class="label">Russian</div>
+      </button>
+
+      <!-- 10. Arabic -->
+      <button class="flag" data-video="YOUTUBE_ID_ARABIC">
+        <div class="emoji">🇸🇦</div>
+        <div class="label">Arabic</div>
+      </button>
+
+      <!-- 11. Hebrew -->
+      <button class="flag" data-video="YOUTUBE_ID_HEBREW">
+        <div class="emoji">🇮🇱</div>
+        <div class="label">Hebrew</div>
+      </button>
+
+      <!-- 12. Amharic -->
+      <button class="flag" data-video="YOUTUBE_ID_AMHARIC">
+        <div class="emoji">🇪🇹</div>
+        <div class="label">Amharic</div>
+      </button>
+
+      <!-- 13. Igbo -->
+      <button class="flag" data-video="YOUTUBE_ID_IGBO">
+        <div class="emoji">🇳🇬</div>
+        <div class="label">Igbo</div>
+      </button>
+
+      <!-- 14. Nepali -->
+      <button class="flag" data-video="YOUTUBE_ID_NEPALI">
+        <div class="emoji">🇳🇵</div>
+        <div class="label">Nepali</div>
+      </button>
+
+      <!-- 15. Karen -->
+      <button class="flag" data-video="YOUTUBE_ID_KAREN">
+        <div class="emoji">🇲🇲</div>
+        <div class="label">Karen</div>
+      </button>
+
+    </div>
+
+    <footer>
+      © Närvilä — Christmas Gospel Language Selection
+    </footer>
+  </main>
+
+  <script>
+    const grid = document.getElementById('flag-grid');
+    const wrap = document.getElementById('player-wrap');
+    const placeholder = document.getElementById('placeholder');
+
+    function setVideo(id) {
+      if (!id || id.startsWith("YOUTUBE_ID_")) {
+        alert("This language does not have a video yet.");
+        return;
+      }
+
+      const src = `https://www.youtube.com/embed/${id}?autoplay=1&rel=0`;
+
+      const old = wrap.querySelector("iframe");
+      if (old) old.remove();
+
+      const iframe = document.createElement("iframe");
+      iframe.src = src;
+      iframe.setAttribute("allowfullscreen", "");
+      iframe.setAttribute("allow", "autoplay; encrypted-media");
+      wrap.appendChild(iframe);
+
+      if (placeholder) placeholder.remove();
+    }
+
+    grid.addEventListener("click", (e) => {
+      const btn = e.target.closest(".flag");
+      if (!btn) return;
+      setVideo(btn.dataset.video);
+    });
+  </script>
+
+</body>
+</html>
