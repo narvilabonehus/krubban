@@ -171,22 +171,22 @@
       <a href="https://www.narvila.fi/program/" target="_blank" class="btn-link">Visit narvila.fi</a>
     </div>
 
-    <!-- Flags in recommended order -->
+    <!-- Flags (first 4 preserved, others in logical order) -->
     <div class="grid" id="flag-grid" style="margin-top:25px;">
 
-      <!-- 3. Swedish -->
+      <!-- 1. Swedish -->
       <button class="flag" data-video="nT74kszCw1k">
         <div class="emoji">🇸🇪</div>
         <div class="label">Swedish</div>
       </button>
 
-       <!-- 2. Finnish -->
+      <!-- 2. Finnish -->
       <button class="flag" data-video="Vvyru8X5wAQ">
         <div class="emoji">🇫🇮</div>
         <div class="label">Finnish</div>
       </button>
-      
-      <!-- 1. English -->
+
+      <!-- 3. English -->
       <button class="flag" data-video="5csjUUm2U8M">
         <div class="emoji">🇺🇸</div>
         <div class="label">English</div>
@@ -216,49 +216,93 @@
         <div class="label">Spanish</div>
       </button>
 
-      <!-- 8. Ukrainian -->
+      <!-- 8. Polish -->
+      <button class="flag" data-video="SPZIcLgjBPk">
+        <div class="emoji">🇵🇱</div>
+        <div class="label">Polish</div>
+      </button>
+
+      <!-- 9. Lithuanian -->
+      <button class="flag" data-video="w0J9XomPrWI">
+        <div class="emoji">🇱🇹</div>
+        <div class="label">Lithuanian</div>
+      </button>
+
+      <!-- 10. Estonian -->
+      <button class="flag" data-video="SOl9UVTZTtY">
+        <div class="emoji">🇪🇪</div>
+        <div class="label">Estonian</div>
+      </button>
+
+      <!-- 11. Ukrainian -->
       <button class="flag" data-video="lMKKdnFOv0g">
         <div class="emoji">🇺🇦</div>
         <div class="label">Ukrainian</div>
       </button>
 
-      <!-- 9. Russian -->
+      <!-- 12. Russian -->
       <button class="flag" data-video="85ZPYfS-C_Q">
         <div class="emoji">🇷🇺</div>
         <div class="label">Russian</div>
       </button>
 
-      <!-- 10. Arabic -->
+      <!-- 13. Albanian -->
+      <button class="flag" data-video="463NLZ58E8s">
+        <div class="emoji">🇦🇱</div>
+        <div class="label">Albanian</div>
+      </button>
+
+      <!-- 14. Arabic -->
       <button class="flag" data-video="0iu91zJogD4">
         <div class="emoji">🇸🇦</div>
         <div class="label">Arabic</div>
       </button>
 
-      <!-- 11. Hebrew -->
+      <!-- 15. Hebrew -->
       <button class="flag" data-video="-YpPlcuUnhM">
         <div class="emoji">🇮🇱</div>
         <div class="label">Hebrew</div>
       </button>
 
-      <!-- 12. Amharic -->
+      <!-- 16. Amharic -->
       <button class="flag" data-video="3owwGs8HiT8">
         <div class="emoji">🇪🇹</div>
         <div class="label">Amharic</div>
       </button>
 
-      <!-- 13. Igbo -->
+      <!-- 17. Igbo (Biafra flag as image) -->
       <button class="flag" data-video="X3QDwB2lq10">
-        <div class="emoji">🇳🇬</div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Flag_of_Biafra.svg"
+             alt="Biafra flag"
+             style="width:40px; height:auto; border-radius:4px;">
         <div class="label">Igbo</div>
       </button>
 
-      <!-- 14. Nepali -->
+      <!-- 18. Nepali -->
       <button class="flag" data-video="Eo3z4mdo0UQ">
         <div class="emoji">🇳🇵</div>
         <div class="label">Nepali</div>
       </button>
 
-      <!-- 15. Karen -->
+      <!-- 19. Chinese -->
+      <button class="flag" data-video="q9pO4I20SMs">
+        <div class="emoji">🇨🇳</div>
+        <div class="label">Chinese</div>
+      </button>
+
+      <!-- 20. Japanese -->
+      <button class="flag" data-video="bWPH2VO9yi4">
+        <div class="emoji">🇯🇵</div>
+        <div class="label">Japanese</div>
+      </button>
+
+      <!-- 21. Vietnamese -->
+      <button class="flag" data-video="s5Vd0H_hFq8">
+        <div class="emoji">🇻🇳</div>
+        <div class="label">Vietnamese</div>
+      </button>
+
+      <!-- 22. Karen -->
       <button class="flag" data-video="UQC5pDutwn4">
         <div class="emoji">🇲🇲</div>
         <div class="label">Karen</div>
@@ -277,7 +321,7 @@
     const placeholder = document.getElementById('placeholder');
 
     function setVideo(id) {
-      if (!id || id.startsWith("YOUTUBE_ID_")) {
+      if (!id) {
         alert("This language does not have a video yet.");
         return;
       }
